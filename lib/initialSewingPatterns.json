@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "name": "Axis Tank",
     "designer": "Sophie Hines",
     "category": "tops",
@@ -7,6 +8,7 @@
     "notions": "thread"
   },
   {
+    "id": "2",
     "name": "14 シャツシノワーズ",
     "designer": "the factory sewing book 2",
     "category": "tops",
@@ -14,6 +16,7 @@
     "notions": "interfacing | 7 buttons 10mm"
   },
   {
+    "id": "3",
     "name": "5 Hose",
     "designer": "burda easy HW 2010",
     "category": "trousers",
