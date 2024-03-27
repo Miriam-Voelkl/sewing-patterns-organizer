@@ -12,5 +12,15 @@ export default function DetailsPage({ initialSewingPatterns }) {
     return;
   }
 
-  return <h1>{currentPattern.name}</h1>;
+  return (
+    <>
+      <h1>Sewing Pattern Organizer</h1>
+      <h2>{currentPattern.name}</h2>
+      <h3>{currentPattern.designer}</h3>
+      <section>
+        <p>Yardage: {currentPattern.fabricYardage}</p>
+        <p>Notions: {currentPattern.notions}</p>
+      </section>
+    </>
+  );
 }
