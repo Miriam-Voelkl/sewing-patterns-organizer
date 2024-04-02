@@ -20,12 +20,12 @@ export default function HomePage({ initialSewingPatterns }) {
 
   return (
     <>
-      <h1>Sewing Pattern Organizer</h1>
+      <StyledH1>Sewing Pattern Organizer</StyledH1>
       <StyledList>
         {sewingPatterns.map((pattern) => (
           <li key={pattern.id}>
             <StyledCard>
-              <h2>{pattern.name}</h2>
+              <StyledH2>{pattern.name}</StyledH2>
               <h3>{pattern.designer}</h3>
               <p>Category: {pattern.category}</p>
               <Link href={`/patterns/${pattern.id}`}>more</Link>
@@ -33,8 +33,8 @@ export default function HomePage({ initialSewingPatterns }) {
           </li>
         ))}
       </StyledList>
-      <h2>add a new pattern:</h2>
-      <form onSubmit={handlePatternSubmit}>
+      <StyledH2>Add a new pattern:</StyledH2>
+      <StyledForm onSubmit={handlePatternSubmit}>
         <label htmlFor="pattern-name">Name</label>
         <input type="text" id="pattern-name" name="name"></input>
         <label htmlFor="pattern-designer">Designer</label>
@@ -58,18 +58,45 @@ export default function HomePage({ initialSewingPatterns }) {
         <label htmlFor="pattern-notions">Required Notions</label>
         <input type="textarea" id="pattern-notions" name="notions"></input>
         <button type="submit">Submit</button>
-      </form>
+      </StyledForm>
     </>
   );
 }
 
-const StyledCard = styled.div`
-  background-color: goldenrod;
-  padding: 2rem;
-  width: 80%;
-  max-width: 600px;
+const StyledH1 = styled.h1`
+  font-family: var(--font-serif-semibold);
+  text-align: center;
+  color: var(--color-dark-green);
 `;
 
 const StyledList = styled.ul`
   list-style: none;
+  padding: 4px;
+  margin: auto;
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+const StyledCard = styled.div`
+  background-color: var(--color-light-green);
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px var(--color-dark-green);
+`;
+
+const StyledH2 = styled.h2`
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-serif-semibold);
+`;
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
 `;

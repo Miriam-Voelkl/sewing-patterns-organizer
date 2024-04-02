@@ -13,7 +13,8 @@
     "designer": "the factory sewing book 2",
     "category": "tops",
     "fabricYardage": "145cm x 140cm + 145cm x 60cm",
-    "notions": "interfacing | 7 buttons 10mm"
+    "notions": "interfacing | 7 buttons 10mm",
+    "image": "../../lib/14shirtchinoise.jpg"
   },
   {
     "id": "3",
